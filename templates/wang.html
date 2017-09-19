@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title></title>
+    <link rel="stylesheet" href="/static/wang.css">
+</head>
+<body>
+<form action="/form/" method="post" class="smart-green">
+    <h1>留言信息
+        <span>请留下您的信息</span>
+    </h1>
+    <label>
+        <span>姓名:</span>
+        <input id="name" type="text" value="{{ my_message.name }}" name="name" class="error" placeholder="请输入您的姓名"/>
+        <div class="error-msg"></div>
+    </label>
+
+    <label>
+        <span>性别:</span>
+        <input id="sex" type="text" value="{{ my_message.sex }}" name="sex" class="error" placeholder="请输入您的性别"/>
+        <div class="error-msg"></div>
+    </label>
+
+    <label>
+        <span>年龄:</span>
+        <input id="age" type="text" value="{{ my_message.age }}" name="age" class="error" placeholder="请输入您的年龄"/>
+        <div class="error-msg"></div>
+    </label>
+
+    <label>
+        <span>所在高校:</span>
+        <input id="university" type="text" value="{{ my_message.university }}" name="university" class="error" placeholder="请输入您所在的高校:"/>
+        <div class="error-msg"></div>
+    </label>
+
+    <label>
+        <span>所读专业:</span>
+        <input id="major" type="text" value="{{ my_message.major }}" name="major" class="error" placeholder="请输入您所读的专业:"/>
+        <div class="error-msg"></div>
+    </label>
+
+    <label>
+        <span>邮箱:</span>
+        <input id="email" type="email" value="{{ my_message.email }} " name="email" placeholder="请输入您的邮箱ַ"/>
+        <div class="error-msg"></div>
+    </label>
+
+    <label>
+        <span>联系地址 :</span>
+        <input id="address" type="text" value="{{ my_message.address }} " name="address" placeholder="请输入您的联系地址ַ"/>
+        <div class="error-msg"></div>
+    </label>
+
+    <label>
+        <span> 留言:</span>
+        <textarea id="message" name="message"  placeholder="请输入你的建议:">{{ my_message.message}}</textarea>
+        <div class="error-msg"></div>
+    </label>
+    <div class="success-msg"></div>
+    <label>
+        <span>&nbsp;</span>
+        <input type="submit" class="button" value="提交"/>
+    </label>
+    <input type='hidden' name='csrfmiddlewaretoken' value='SfHkbL4feo1G00sJQtbO7TtLN4c2BUwa' />
+    {% csrf_token %}
+</form>
+
+</body>
+</html>

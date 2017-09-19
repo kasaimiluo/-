@@ -1,0 +1,102 @@
+<html>
+ <head>
+     <meta charset="utf-8">
+  <title>注册</title>
+  <link rel="stylesheet" href="/static/style.css">
+  <script>
+   function checkBt()
+   {
+      var flag=document.getElementById("ck").checked;
+      if(flag)
+      {
+         document.getElementById("reg").disabled=false;
+      }
+      else
+      {
+         document.getElementById("reg").disabled=true;
+      }
+   }
+
+ 	function checklength(){
+
+	var password=document.getElementById ("password").value;//获取密码框值
+	
+if(password.length<6){
+		
+				alert("用户的密码不能低于6位")	}
+  </script>
+ </head>
+ <body>
+  <center>
+  <h4>用户注册</h4>
+  <form action="" method="post">
+   <table>
+    <tr>
+     <td class="cs">用户名:</td>
+     <td><input type="text" id="username" size="19"/></td>
+    </tr>
+    <tr>
+     <td class="cs">密码:</td>
+     <td><input type="password" id="password"/></td>
+    </tr>
+    <tr>
+     <td class="cs">确认密码:</td>
+     <td><input type="password" id="pwd"/></td>
+    </tr>
+    <tr>
+     <td class="cs">性别:</td>
+     <td>
+       <input type="radio" name="sex" checked="checked"/>男
+       <input type="radio" name="sex"/>女
+     </td>
+    </tr>
+    <tr>
+     <td class="cs">籍贯:</td>
+     <td>
+       <select>
+         <option>请选择</option>
+         <option>北京</option>
+         <option>广东</option>
+       </select>省
+       <select>
+         <option>请选择</option>
+       </select>市
+     </td>
+    </tr>
+    <tr>
+     <td class="cs">出生日期:</td>
+     <td><input type="date" id="birth"/></td>
+    </tr>
+    <tr>
+     <td class="cs">联系方式:</td>
+     <td><input type="text" id="phone"/></td>
+    </tr>
+    <tr>
+     <td class="cs">上传图像:</td>
+     <td><input type="file"/></td>
+    </tr>
+    <tr>
+     <td class="cs">兴趣爱好:</td>
+     <td>
+       <input type="checkbox" name="football"/>足球
+       <input type="checkbox" name="basketball"/>篮球
+       <input type="checkbox" name="volleyball"/>排球
+     </td>
+    </tr>
+    <tr>
+     <td colspan="2" style="text-align:center">
+       <input type="checkbox" id="ck" onclick="checkBt()" onclick="checklength()"/>
+       同意相关协议
+     </td>
+    </tr>
+    <tr>
+     <td colspan="2" style="text-align:center">
+       <input type="button" id="reg" value="注册" disabled="true"/>
+       <input type="reset" value="取消"/>
+     </td>
+    </tr>
+   </table>
+  </form>
+  </center>
+ </body>
+</html>
